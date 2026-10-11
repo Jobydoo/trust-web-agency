@@ -11,25 +11,25 @@ export default function TrustMarquee() {
   return (
     <section
       style={{
-        padding: '36px 0',
-        borderTop: '1px solid rgba(255, 255, 255, 0.06)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
-        background: 'rgba(15, 23, 42, 0.55)',
+        padding: '30px 0',
+        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+        background: 'rgba(14, 16, 22, 0.5)',
         overflow: 'hidden',
         position: 'relative'
       }}
     >
-      <div style={{ textAlign: 'center', marginBottom: '18px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '14px' }}>
         <span
           style={{
-            fontSize: '0.78rem',
+            fontSize: '0.72rem',
             textTransform: 'uppercase',
-            letterSpacing: '0.14em',
-            color: '#707EAE',
-            fontWeight: '700'
+            letterSpacing: '0.12em',
+            color: '#64748B',
+            fontWeight: '600'
           }}
         >
-          Écosystème Certifié & Partenaires Technologiques Mondiaux
+          Écosystème Technologique & Standards d'Ingénierie
         </span>
       </div>
 
@@ -45,7 +45,7 @@ export default function TrustMarquee() {
         <div
           style={{
             display: 'flex',
-            gap: '48px',
+            gap: '36px',
             animation: 'marquee 35s linear infinite',
             whiteSpace: 'nowrap'
           }}
@@ -56,26 +56,25 @@ export default function TrustMarquee() {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '12px',
-                padding: '8px 18px',
-                borderRadius: '999px',
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.08)'
+                gap: '8px',
+                padding: '6px 14px',
+                borderRadius: '6px',
+                background: 'rgba(255, 255, 255, 0.02)',
+                border: '1px solid rgba(255, 255, 255, 0.06)'
               }}
             >
-              <div
+              <span
                 style={{
-                  width: '8px',
-                  height: '8px',
+                  width: '6px',
+                  height: '6px',
                   borderRadius: '50%',
-                  background: '#00F2FE',
-                  boxShadow: '0 0 10px #00F2FE'
+                  background: '#3B82F6'
                 }}
               />
-              <span style={{ fontWeight: '700', fontSize: '0.92rem', color: '#FFFFFF' }}>
+              <span style={{ fontWeight: '600', fontSize: '0.86rem', color: '#F8FAFC' }}>
                 {partner.name}
               </span>
-              <span style={{ fontSize: '0.8rem', color: '#707EAE' }}>
+              <span style={{ fontSize: '0.76rem', color: '#64748B' }}>
                 — {partner.desc}
               </span>
             </div>

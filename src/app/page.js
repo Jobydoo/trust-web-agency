@@ -6,6 +6,7 @@ import CompetitorComparison from '@/components/CompetitorComparison';
 import RoiCalculator from '@/components/RoiCalculator';
 import CrmSimulator from '@/components/CrmSimulator';
 import PortfolioSection from '@/components/PortfolioSection';
+import BlogPreviewSection from '@/components/BlogPreviewSection';
 import LocalSeoHub from '@/components/LocalSeoHub';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FaqSection from '@/components/FaqSection';
@@ -15,7 +16,7 @@ import WhatsAppWidget from '@/components/WhatsAppWidget';
 
 export default function HomePage() {
   return (
-    <main style={{ minHeight: '100vh', background: '#0B0F19' }}>
+    <main style={{ minHeight: '100vh', background: '#08090C' }}>
       <Navbar />
       <Hero />
       <TrustMarquee />
@@ -24,6 +25,7 @@ export default function HomePage() {
       <RoiCalculator />
       <CrmSimulator />
       <PortfolioSection />
+      <BlogPreviewSection />
       <LocalSeoHub />
       <TestimonialsSection />
       <FaqSection />

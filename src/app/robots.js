@@ -4,14 +4,30 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
+        disallow: ['/api/', '/admin/', '/_next/'],
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
       },
       {
+        userAgent: 'Googlebot-Image',
+        allow: '/',
+      },
+      {
         userAgent: 'Bingbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Applebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Twitterbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'facebookexternalhit',
         allow: '/',
       },
     ],

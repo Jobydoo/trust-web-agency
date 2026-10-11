@@ -7,12 +7,12 @@ export default function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const categories = [
-    { id: 'all', label: 'Toutes les Réalisations' },
+    { id: 'all', label: 'Tous les Projets' },
     { id: 'Tourisme & Réservations', label: 'Tourisme & Voyage' },
-    { id: 'Circuits & Voyages Culturels', label: 'Google Ads & ROI' },
+    { id: 'Circuits & Voyages Culturels', label: 'Acquisition Ads & ROI' },
     { id: 'Excursions & Billetterie', label: 'E-Commerce & CMI' },
     { id: 'Transport VIP & Prestige', label: 'CRM & Automatisation' },
-    { id: 'Luxe & Voyages de Noces', label: 'Design HorizonX' }
+    { id: 'Luxe & Voyages de Noces', label: 'Plateformes Next.js' }
   ];
 
   const filteredProjects = activeFilter === 'all'
@@ -20,17 +20,17 @@ export default function PortfolioSection() {
     : portfolioProjects.filter(p => p.category === activeFilter);
 
   return (
-    <section id="portfolio" style={{ padding: '120px 0', position: 'relative' }}>
+    <section id="portfolio" style={{ padding: '110px 0', position: 'relative' }}>
       <div className="container">
         <div className="section-header">
           <div className="badge badge-primary section-eyebrow">
-            <span>🏆</span> Études de Cas & Résultats Vérifiés
+            <span>RÉALISATIONS & ÉTUDES DE CAS</span>
           </div>
           <h2>
-            Nos réalisations parlent en <span className="gradient-accent">chiffres réels</span>.
+            Nos réalisations parlent en <span style={{ color: '#3B82F6' }}>chiffres vérifiés</span>.
           </h2>
           <p>
-            Découvrez comment nous avons propulsé des entreprises marocaines et internationales
+            Découvrez comment nous avons propulsé des entreprises au Maroc et à l'international
             en tête de leur marché grâce à notre approche combinée Web + Ads + CRM.
           </p>
         </div>
@@ -41,9 +41,9 @@ export default function PortfolioSection() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '10px',
+            gap: '8px',
             flexWrap: 'wrap',
-            marginBottom: '48px'
+            marginBottom: '42px'
           }}
         >
           {categories.map((cat) => (
@@ -51,15 +51,15 @@ export default function PortfolioSection() {
               key={cat.id}
               onClick={() => setActiveFilter(cat.id)}
               style={{
-                padding: '9px 20px',
-                borderRadius: '999px',
-                border: activeFilter === cat.id ? '1px solid #00F2FE' : '1px solid rgba(255, 255, 255, 0.08)',
-                background: activeFilter === cat.id ? 'rgba(0, 242, 254, 0.15)' : 'rgba(255, 255, 255, 0.03)',
-                color: activeFilter === cat.id ? '#00F2FE' : '#A3AED0',
-                fontWeight: '600',
-                fontSize: '0.88rem',
+                padding: '7px 16px',
+                borderRadius: '6px',
+                border: activeFilter === cat.id ? '1px solid #3B82F6' : '1px solid rgba(255, 255, 255, 0.08)',
+                background: activeFilter === cat.id ? 'rgba(37, 99, 235, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+                color: activeFilter === cat.id ? '#60A5FA' : '#94A3B8',
+                fontWeight: '500',
+                fontSize: '0.84rem',
                 cursor: 'pointer',
-                transition: 'all 0.2s ease'
+                transition: 'all 0.15s ease'
               }}
             >
               {cat.label}
@@ -77,75 +77,64 @@ export default function PortfolioSection() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                padding: '30px'
+                padding: '26px'
               }}
             >
               <div>
-                {/* Card Header with gradient banner */}
-                <div
-                  style={{
-                    height: '110px',
-                    borderRadius: '14px',
-                    background: project.gradient,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '20px',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}
-                >
+                {/* Header tag */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
                   <span
                     style={{
-                      position: 'absolute',
-                      top: '12px',
-                      left: '12px',
-                      background: 'rgba(0,0,0,0.5)',
-                      backdropFilter: 'blur(8px)',
-                      color: '#FFFFFF',
-                      padding: '4px 10px',
-                      borderRadius: '6px',
                       fontSize: '0.72rem',
-                      fontWeight: '700'
+                      color: '#60A5FA',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.06em',
+                      fontWeight: '600'
+                    }}
+                  >
+                    {project.category}
+                  </span>
+                  <span
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.04)',
+                      border: '1px solid rgba(255, 255, 255, 0.08)',
+                      padding: '3px 8px',
+                      borderRadius: '4px',
+                      fontSize: '0.72rem',
+                      color: '#94A3B8',
+                      fontFamily: 'monospace'
                     }}
                   >
                     {project.tag}
                   </span>
-                  <span style={{ fontSize: '1.4rem', fontWeight: '800', color: '#FFFFFF', letterSpacing: '-0.02em' }}>
-                    {project.clientUrl}
-                  </span>
                 </div>
 
-                <div style={{ fontSize: '0.78rem', color: '#00F2FE', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '700', marginBottom: '6px' }}>
-                  {project.category}
-                </div>
-
-                <h3 style={{ fontSize: '1.35rem', color: '#FFFFFF', marginBottom: '14px' }}>
+                <h3 style={{ fontSize: '1.25rem', color: '#F8FAFC', marginBottom: '12px' }}>
                   {project.title}
                 </h3>
 
                 {/* Challenge & Solution */}
                 <div style={{ marginBottom: '16px' }}>
-                  <div style={{ fontSize: '0.84rem', color: '#A3AED0', marginBottom: '8px', lineHeight: '1.5' }}>
-                    <strong style={{ color: '#FFFFFF' }}>Défi :</strong> {project.challenge}
+                  <div style={{ fontSize: '0.84rem', color: '#94A3B8', marginBottom: '6px', lineHeight: '1.5' }}>
+                    <strong style={{ color: '#F8FAFC' }}>Défi :</strong> {project.challenge}
                   </div>
-                  <div style={{ fontSize: '0.84rem', color: '#A3AED0', lineHeight: '1.5' }}>
-                    <strong style={{ color: '#05CD99' }}>Solution :</strong> {project.solution}
+                  <div style={{ fontSize: '0.84rem', color: '#94A3B8', lineHeight: '1.5' }}>
+                    <strong style={{ color: '#10B981' }}>Solution :</strong> {project.solution}
                   </div>
                 </div>
 
                 {/* Tags */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '22px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
                   {project.stack.map((item, i) => (
                     <span
                       key={i}
                       style={{
-                        background: 'rgba(255, 255, 255, 0.04)',
-                        border: '1px solid rgba(255, 255, 255, 0.08)',
-                        padding: '3px 8px',
-                        borderRadius: '6px',
-                        fontSize: '0.72rem',
-                        color: '#CBD5E1'
+                        background: 'rgba(255, 255, 255, 0.03)',
+                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                        padding: '2px 7px',
+                        borderRadius: '4px',
+                        fontSize: '0.7rem',
+                        color: '#94A3B8'
                       }}
                     >
                       {item}
@@ -158,16 +147,16 @@ export default function PortfolioSection() {
               <div
                 style={{
                   borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-                  paddingTop: '16px',
-                  fontSize: '0.86rem',
-                  fontWeight: '700',
-                  color: '#05CD99',
+                  paddingTop: '14px',
+                  fontSize: '0.84rem',
+                  fontWeight: '600',
+                  color: '#10B981',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '6px'
                 }}
               >
-                <span>📈</span>
+                <span>●</span>
                 <span>{project.metrics}</span>
               </div>
             </div>

@@ -1,125 +1,133 @@
 'use client';
 
 import Link from 'next/link';
-import { agencyConfig, servicesData, citiesData } from '@/data/agencyData';
+import { agencyConfig, servicesData } from '@/data/agencyData';
+import { blogsData } from '@/data/blogsData';
 
 export default function Footer() {
   return (
     <footer
       style={{
-        background: '#070B14',
+        background: '#07080B',
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-        paddingTop: '80px',
-        paddingBottom: '40px',
+        paddingTop: '70px',
+        paddingBottom: '36px',
         position: 'relative'
       }}
     >
       <div className="container">
-        <div className="grid-4" style={{ marginBottom: '60px' }}>
+        <div className="grid-4" style={{ marginBottom: '52px' }}>
           {/* Col 1: Brand & Bio */}
           <div>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', marginBottom: '16px' }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', marginBottom: '14px' }}>
               <div
                 style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '10px',
-                  background: 'linear-gradient(135deg, #4318FF 0%, #00F2FE 100%)',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '6px',
+                  background: '#2563EB',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#FFFFFF',
-                  fontWeight: '900',
-                  fontSize: '1.1rem'
+                  fontWeight: '800',
+                  fontSize: '1rem'
                 }}
               >
                 T
               </div>
-              <span style={{ fontWeight: '800', fontSize: '1.2rem', color: '#FFFFFF' }}>
-                Trust<span style={{ color: '#00F2FE' }}>Web</span> Agency
+              <span style={{ fontWeight: '700', fontSize: '1.1rem', color: '#F8FAFC' }}>
+                Trust<span style={{ color: '#3B82F6' }}>Web</span> Agency
               </span>
             </Link>
 
-            <p style={{ color: '#A3AED0', fontSize: '0.9rem', lineHeight: '1.65', marginBottom: '20px' }}>
-              L'agence web & croissance digitale N°1 nouvelle génération.
-              Architecture Next.js foudroyante, Media Buying rentabilisé et CRM automatisé.
+            <p style={{ color: '#94A3B8', fontSize: '0.86rem', lineHeight: '1.65', marginBottom: '18px' }}>
+              Studio d'ingénierie web et d'acquisition de performance.
+              Développement Next.js 14, Media Buying rentabilisé et intégrations CRM sur-mesure.
             </p>
 
-            <div style={{ display: 'flex', gap: '12px' }}>
+            <div style={{ display: 'flex', gap: '10px' }}>
               <a
                 href={agencyConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="WhatsApp Direct"
                 style={{
-                  width: '38px',
-                  height: '38px',
-                  borderRadius: '50%',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: '6px',
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#25D366'
+                  color: '#10B981'
                 }}
               >
-                💬
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.761.882 2.796.882 3.183 0 5.77-2.587 5.77-5.766.001-3.182-2.585-5.769-5.77-5.769zm0-2.172c4.418 0 8 3.582 8 8 0 1.503-.418 2.91-1.144 4.119l1.144 4.181-4.28-1.122c-1.156.666-2.493 1.042-3.92 1.042-4.418 0-8-3.582-8-8s3.582-8 8-8z"/>
+                </svg>
               </a>
               <a
                 href={`mailto:${agencyConfig.email}`}
+                aria-label="Email"
                 style={{
-                  width: '38px',
-                  height: '38px',
-                  borderRadius: '50%',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: '6px',
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#00F2FE'
+                  color: '#60A5FA'
                 }}
               >
-                ✉️
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
               </a>
             </div>
           </div>
 
           {/* Col 2: Services */}
           <div>
-            <h5 style={{ fontSize: '1rem', color: '#FFFFFF', marginBottom: '18px', fontWeight: '700' }}>
-              Nos Piliers Digitaux
+            <h5 style={{ fontSize: '0.92rem', color: '#F8FAFC', marginBottom: '14px', fontWeight: '600' }}>
+              Expertises
             </h5>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {servicesData.map((s) => (
                 <li key={s.id}>
-                  <Link href={`/#${s.id}`} style={{ color: '#A3AED0', fontSize: '0.88rem', transition: 'color 0.2s' }}>
+                  <Link href={`/#${s.id}`} style={{ color: '#94A3B8', fontSize: '0.84rem', transition: 'color 0.15s' }}>
                     {s.title}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/#roi-calculator" style={{ color: '#00F2FE', fontSize: '0.88rem', fontWeight: '600' }}>
-                  Simulateur de ROI & Rentabilité →
+                <Link href="/#roi-calculator" style={{ color: '#3B82F6', fontSize: '0.84rem', fontWeight: '500' }}>
+                  Simulateur de ROI →
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Local SEO Hub */}
+          {/* Col 3: Blog & Analyses */}
           <div>
-            <h5 style={{ fontSize: '1rem', color: '#FFFFFF', marginBottom: '18px', fontWeight: '700' }}>
-              Villes Couvertes
+            <h5 style={{ fontSize: '0.92rem', color: '#F8FAFC', marginBottom: '14px', fontWeight: '600' }}>
+              Analyses & Guides Récents
             </h5>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {citiesData.slice(0, 5).map((city, idx) => (
-                <li key={idx}>
-                  <Link href={`/#agence-web-${city.slug}`} style={{ color: '#A3AED0', fontSize: '0.88rem' }}>
-                    Agence Web {city.name}
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {blogsData.slice(0, 4).map((post) => (
+                <li key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} style={{ color: '#94A3B8', fontSize: '0.82rem', lineHeight: '1.4', display: 'block' }}>
+                    {post.title}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/#villes" style={{ color: '#00F2FE', fontSize: '0.88rem', fontWeight: '600' }}>
-                  Voir toutes les implantations →
+                <Link href="/blog" style={{ color: '#60A5FA', fontSize: '0.84rem', fontWeight: '600' }}>
+                  Consulter les 20 articles de fond →
                 </Link>
               </li>
             </ul>
@@ -127,29 +135,30 @@ export default function Footer() {
 
           {/* Col 4: Contact & Direct Info */}
           <div>
-            <h5 style={{ fontSize: '1rem', color: '#FFFFFF', marginBottom: '18px', fontWeight: '700' }}>
-              Contact Direct
+            <h5 style={{ fontSize: '0.92rem', color: '#F8FAFC', marginBottom: '14px', fontWeight: '600' }}>
+              Contact & Bureaux
             </h5>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.88rem', color: '#A3AED0' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.84rem', color: '#94A3B8' }}>
               <div>
-                <strong style={{ color: '#FFFFFF', display: 'block' }}>Email Officiel :</strong>
-                <a href={`mailto:${agencyConfig.email}`} style={{ color: '#00F2FE' }}>
+                <span style={{ color: '#64748B', display: 'block', fontSize: '0.74rem', textTransform: 'uppercase' }}>Email</span>
+                <a href={`mailto:${agencyConfig.email}`} style={{ color: '#F8FAFC' }}>
                   {agencyConfig.email}
                 </a>
               </div>
               <div>
-                <strong style={{ color: '#FFFFFF', display: 'block' }}>Téléphone & WhatsApp :</strong>
-                <a href={`tel:${agencyConfig.phoneRaw}`} style={{ color: '#FFFFFF' }}>
+                <span style={{ color: '#64748B', display: 'block', fontSize: '0.74rem', textTransform: 'uppercase' }}>Téléphone</span>
+                <a href={`tel:${agencyConfig.phoneRaw}`} style={{ color: '#F8FAFC' }}>
                   {agencyConfig.phone}
                 </a>
               </div>
               <div>
-                <strong style={{ color: '#FFFFFF', display: 'block' }}>Siège Social :</strong>
+                <span style={{ color: '#64748B', display: 'block', fontSize: '0.74rem', textTransform: 'uppercase' }}>Siège</span>
                 <span>{agencyConfig.address.street}, {agencyConfig.address.locality}</span>
               </div>
-              <div style={{ marginTop: '8px' }}>
-                <span className="badge badge-emerald" style={{ fontSize: '0.72rem' }}>
-                  ● Équipe en ligne · Réponse immédiate
+              <div style={{ marginTop: '4px' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.74rem', color: '#10B981' }}>
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#10B981' }} />
+                  Équipe en ligne · Réponse sous 24h
                 </span>
               </div>
             </div>
@@ -160,26 +169,28 @@ export default function Footer() {
         <div
           style={{
             borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-            paddingTop: '32px',
+            paddingTop: '24px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '16px',
-            fontSize: '0.82rem',
-            color: '#707EAE'
+            gap: '12px',
+            fontSize: '0.78rem',
+            color: '#64748B'
           }}
         >
           <div>
-            © 2026 <strong style={{ color: '#FFFFFF' }}>Trust Web Agency SARL</strong>. Tous droits réservés.
+            © 2026 <strong style={{ color: '#CBD5E1' }}>Trust Web Agency SARL</strong>. Tous droits réservés.
           </div>
 
-          <div style={{ display: 'flex', gap: '20px' }}>
-            <span>Architecture Next.js 14 Edge</span>
+          <div style={{ display: 'flex', gap: '14px' }}>
+            <Link href="/blog" style={{ color: '#94A3B8' }}>Index Blog</Link>
             <span>·</span>
-            <span>Hébergement Vercel Cloud CDN</span>
+            <Link href="/sitemap.xml" style={{ color: '#94A3B8' }}>Sitemap XML</Link>
             <span>·</span>
-            <span>Conformité Google Search Console</span>
+            <Link href="/robots.txt" style={{ color: '#94A3B8' }}>Robots.txt</Link>
+            <span>·</span>
+            <span>Hébergement Vercel Edge</span>
           </div>
         </div>
       </div>

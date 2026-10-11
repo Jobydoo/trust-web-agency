@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
       company: "Morocco Desert Trips",
       location: "Marrakech / Ouarzazate",
       rating: 5,
-      quote: "Trust Web Agency a littéralement transformé notre entreprise. Notre ancien site WordPress mettait 7 secondes à charger et nous perdions 70% de nos visiteurs. Avec la nouvelle plateforme Next.js et la capture automatique sur WhatsApp, nos réservations directes ont bondi de +340% en 4 mois !",
+      quote: "Trust Web Agency a profondément transformé notre acquisition client. Notre ancien site WordPress mettait plus de 6 secondes à charger et nous perdions 70% de nos visiteurs mobiles. Avec la plateforme Next.js et la capture automatique sur WhatsApp, nos réservations directes ont progressé de +340% en 4 mois.",
       metric: "+340% de réservations directes"
     },
     {
@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
       company: "Best Travel Morocco",
       location: "Casablanca",
       rating: 5,
-      quote: "Leur maîtrise du Media Buying Google Ads est chirurgicale. Auparavant, nous dépensions plus de 280 MAD par devis qualifié. L'équipe de Trust Web Agency a restructuré nos campagnes et créé des tunnels ultra-rapides : notre coût par lead est tombé à 95 MAD avec un taux de closing remarquable.",
+      quote: "Leur maîtrise de l'acquisition Google Ads est chirurgicale. Auparavant, nous dépensions plus de 280 MAD par devis qualifié. L'équipe a restructuré nos campagnes et créé des tunnels foudroyants : notre coût par lead est tombé à 95 MAD avec un taux de closing remarquable.",
       metric: "Coût par lead divisé par 3"
     },
     {
@@ -26,24 +26,24 @@ export default function TestimonialsSection() {
       company: "Transport & Circuits VIP",
       location: "Tanger / Rabat",
       rating: 5,
-      quote: "L'intégration du CRM avec notre gestion et l'API WhatsApp nous fait gagner au moins 15 heures chaque semaine. Dès qu'un client réserve en ligne, le chauffeur et le contrat PDF sont assignés sans aucune saisie manuelle. Un niveau de professionnalisme rare sur le marché.",
+      quote: "L'intégration du CRM avec notre gestion et l'API WhatsApp nous fait gagner au moins 15 heures chaque semaine. Dès qu'un client réserve en ligne, le dossier et le devis sont traités sans aucune saisie manuelle. Un niveau de rigueur technique très rare sur le marché.",
       metric: "15h économisées chaque semaine"
     }
   ];
 
   return (
-    <section style={{ padding: '100px 0', position: 'relative' }}>
+    <section style={{ padding: '100px 0', background: 'rgba(14, 16, 22, 0.4)', position: 'relative' }}>
       <div className="container">
         <div className="section-header">
           <div className="badge badge-emerald section-eyebrow">
-            <span>★ 4.9/5 Note Moyenne</span>
+            <span>AVIS CLIENTS VÉRIFIÉS · 4.9/5</span>
           </div>
           <h2>
-            Ce que disent les dirigeants qui nous font <span className="gradient-accent">confiance</span>.
+            Ce que disent les dirigeants qui nous font <span style={{ color: '#3B82F6' }}>confiance</span>.
           </h2>
           <p>
-            Des retours d'expérience concrets d'entrepreneurs et de directeurs marketing
-            qui ont fait le choix de la vitesse et de la rentabilité.
+            Des retours d'expérience vérifiables d'entrepreneurs et de directeurs généraux
+            qui ont fait le choix de la vitesse et de la rentabilité d'investissement.
           </p>
         </div>
 
@@ -56,17 +56,18 @@ export default function TestimonialsSection() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                padding: '32px'
+                padding: '28px'
               }}
             >
               <div>
-                {/* Stars */}
-                <div style={{ display: 'flex', gap: '4px', color: '#FFB547', marginBottom: '16px', fontSize: '1.1rem' }}>
-                  {'★'.repeat(rev.rating)}
+                {/* Rating score */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '3px', color: '#F59E0B', marginBottom: '16px', fontSize: '0.9rem' }}>
+                  <span>★★★★★</span>
+                  <span style={{ fontSize: '0.78rem', color: '#64748B', marginLeft: '6px' }}>5.0 / 5.0</span>
                 </div>
 
                 {/* Quote */}
-                <p style={{ color: '#CBD5E1', fontSize: '0.96rem', lineHeight: '1.7', fontStyle: 'italic', marginBottom: '24px' }}>
+                <p style={{ color: '#CBD5E1', fontSize: '0.92rem', lineHeight: '1.7', marginBottom: '22px' }}>
                   "{rev.quote}"
                 </p>
               </div>
@@ -75,33 +76,33 @@ export default function TestimonialsSection() {
                 <div
                   style={{
                     borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-                    paddingTop: '18px',
+                    paddingTop: '16px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between'
                   }}
                 >
                   <div>
-                    <div style={{ fontWeight: '700', color: '#FFFFFF', fontSize: '0.98rem' }}>
+                    <div style={{ fontWeight: '600', color: '#F8FAFC', fontSize: '0.92rem' }}>
                       {rev.name}
                     </div>
-                    <div style={{ fontSize: '0.8rem', color: '#707EAE' }}>
+                    <div style={{ fontSize: '0.76rem', color: '#64748B' }}>
                       {rev.role} · {rev.company}
                     </div>
-                    <div style={{ fontSize: '0.74rem', color: '#00F2FE' }}>
-                      📍 {rev.location}
+                    <div style={{ fontSize: '0.72rem', color: '#94A3B8' }}>
+                      {rev.location}
                     </div>
                   </div>
 
                   <div
                     style={{
-                      background: 'rgba(5, 205, 153, 0.12)',
-                      border: '1px solid rgba(5, 205, 153, 0.3)',
-                      padding: '4px 10px',
-                      borderRadius: '8px',
+                      background: 'rgba(16, 185, 129, 0.1)',
+                      border: '1px solid rgba(16, 185, 129, 0.25)',
+                      padding: '3px 8px',
+                      borderRadius: '4px',
                       fontSize: '0.72rem',
-                      color: '#05CD99',
-                      fontWeight: '700',
+                      color: '#10B981',
+                      fontWeight: '600',
                       textAlign: 'right'
                     }}
                   >

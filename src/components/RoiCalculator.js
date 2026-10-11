@@ -18,33 +18,33 @@ export default function RoiCalculator() {
   const hoursSaved = Math.min(leadsGenerated * 0.4, 25).toFixed(0);
 
   return (
-    <section id="roi-calculator" style={{ padding: '120px 0', position: 'relative' }}>
+    <section id="roi-calculator" style={{ padding: '110px 0', position: 'relative' }}>
       <div className="container">
         <div className="section-header">
           <div className="badge badge-emerald section-eyebrow">
-            <span>📊</span> Outil Interactif Gratuit
+            <span>MODÉLISATION FINANCIÈRE</span>
           </div>
           <h2>
-            Simulateur de Rentabilité & <span className="gradient-accent">Retour sur Investissement</span>
+            Simulateur de Rentabilité & <span style={{ color: '#3B82F6' }}>Retour sur Investissement</span>
           </h2>
           <p>
-            Ajustez votre budget publicitaire et le montant moyen de vos contrats pour projeter
-            l'impact financier concret d'un site ultra-rapide couplé à des campagnes optimisées.
+            Ajustez votre budget média et le panier moyen de vos contrats pour projeter
+            l'impact financier net d'une architecture rapide couplée à un ciblage publicitaire chirurgical.
           </p>
         </div>
 
         <div className="grid-2" style={{ alignItems: 'center' }}>
           {/* Controls Card */}
           <div className="horizon-card">
-            <h3 style={{ fontSize: '1.4rem', marginBottom: '24px', color: '#FFFFFF' }}>
-              Paramètres de votre activité
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '22px', color: '#F8FAFC' }}>
+              Paramètres d'Acquisition & Vente
             </h3>
 
             {/* Budget Slider */}
-            <div style={{ marginBottom: '28px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                <label style={{ fontSize: '0.92rem', color: '#A3AED0' }}>Budget Publicitaire Mensuel</label>
-                <span style={{ fontWeight: '800', color: '#00F2FE', fontSize: '1.1rem' }}>
+            <div style={{ marginBottom: '24px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                <label style={{ fontSize: '0.88rem', color: '#94A3B8' }}>Budget Publicitaire Mensuel</label>
+                <span style={{ fontWeight: '700', color: '#F8FAFC', fontSize: '1.05rem', fontFamily: 'monospace' }}>
                   {budget.toLocaleString('fr-FR')} MAD / mois
                 </span>
               </div>
@@ -57,11 +57,11 @@ export default function RoiCalculator() {
                 onChange={(e) => setBudget(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  accentColor: '#00F2FE',
+                  accentColor: '#3B82F6',
                   cursor: 'pointer'
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#707EAE', marginTop: '6px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#64748B', marginTop: '4px' }}>
                 <span>5 000 MAD</span>
                 <span>50 000 MAD</span>
                 <span>100 000 MAD</span>
@@ -69,10 +69,10 @@ export default function RoiCalculator() {
             </div>
 
             {/* Deal Value Slider */}
-            <div style={{ marginBottom: '28px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                <label style={{ fontSize: '0.92rem', color: '#A3AED0' }}>Valeur Moyenne d'un Client / Vente</label>
-                <span style={{ fontWeight: '800', color: '#05CD99', fontSize: '1.1rem' }}>
+            <div style={{ marginBottom: '24px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                <label style={{ fontSize: '0.88rem', color: '#94A3B8' }}>Valeur Moyenne par Client Signé</label>
+                <span style={{ fontWeight: '700', color: '#10B981', fontSize: '1.05rem', fontFamily: 'monospace' }}>
                   {dealValue.toLocaleString('fr-FR')} MAD
                 </span>
               </div>
@@ -85,11 +85,11 @@ export default function RoiCalculator() {
                 onChange={(e) => setDealValue(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  accentColor: '#05CD99',
+                  accentColor: '#10B981',
                   cursor: 'pointer'
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#707EAE', marginTop: '6px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#64748B', marginTop: '4px' }}>
                 <span>500 MAD</span>
                 <span>12 500 MAD</span>
                 <span>25 000 MAD</span>
@@ -97,10 +97,10 @@ export default function RoiCalculator() {
             </div>
 
             {/* Target Cost per Lead */}
-            <div style={{ marginBottom: '14px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                <label style={{ fontSize: '0.92rem', color: '#A3AED0' }}>Objectif Coût Par Lead Qualifié</label>
-                <span style={{ fontWeight: '800', color: '#FFB547', fontSize: '1.1rem' }}>
+            <div style={{ marginBottom: '10px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                <label style={{ fontSize: '0.88rem', color: '#94A3B8' }}>Coût par Lead Qualifié Estimé</label>
+                <span style={{ fontWeight: '700', color: '#F59E0B', fontSize: '1.05rem', fontFamily: 'monospace' }}>
                   ~{cpa} MAD / lead
                 </span>
               </div>
@@ -113,11 +113,11 @@ export default function RoiCalculator() {
                 onChange={(e) => setCpa(Number(e.target.value))}
                 style={{
                   width: '100%',
-                  accentColor: '#FFB547',
+                  accentColor: '#F59E0B',
                   cursor: 'pointer'
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#707EAE', marginTop: '6px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#64748B', marginTop: '4px' }}>
                 <span>B2C / E-com (50 MAD)</span>
                 <span>B2B / Services (350 MAD)</span>
               </div>
@@ -128,25 +128,25 @@ export default function RoiCalculator() {
           <div
             className="horizon-card"
             style={{
-              background: 'linear-gradient(135deg, rgba(17, 28, 68, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%)',
-              border: '1px solid rgba(0, 242, 254, 0.3)',
-              boxShadow: '0 20px 50px rgba(0, 242, 254, 0.15)'
+              background: '#0E1119',
+              border: '1px solid rgba(37, 99, 235, 0.3)',
+              boxShadow: '0 12px 36px rgba(0, 0, 0, 0.6)'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
-              <span className="badge badge-cyan">Projection Prévisionnelle</span>
-              <span style={{ fontSize: '0.82rem', color: '#05CD99', fontWeight: '700' }}>✓ ROAS Estimé : {roas}x</span>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+              <span className="badge badge-primary">PROJECTION PRÉVISIONNELLE</span>
+              <span style={{ fontSize: '0.8rem', color: '#10B981', fontWeight: '600' }}>ROAS Estimé : {roas}x</span>
             </div>
 
-            <div style={{ marginBottom: '28px' }}>
-              <div style={{ fontSize: '0.88rem', color: '#A3AED0', marginBottom: '6px' }}>
-                Chiffre d'Affaires Mensuel Projeté
+            <div style={{ marginBottom: '24px' }}>
+              <div style={{ fontSize: '0.84rem', color: '#94A3B8', marginBottom: '4px' }}>
+                Chiffre d'Affaires Mensuel Prévisionnel
               </div>
-              <div style={{ fontSize: '3rem', fontWeight: '900', color: '#00F2FE', lineHeight: '1' }}>
-                {projectedRevenue.toLocaleString('fr-FR')} <span style={{ fontSize: '1.5rem', color: '#FFFFFF' }}>MAD</span>
+              <div style={{ fontSize: '2.8rem', fontWeight: '800', color: '#F8FAFC', lineHeight: '1', letterSpacing: '-0.03em' }}>
+                {projectedRevenue.toLocaleString('fr-FR')} <span style={{ fontSize: '1.3rem', color: '#64748B' }}>MAD</span>
               </div>
-              <div style={{ fontSize: '0.85rem', color: '#05CD99', marginTop: '8px' }}>
-                Bénéfice net après investissement publicitaire : +{netProfit.toLocaleString('fr-FR')} MAD
+              <div style={{ fontSize: '0.84rem', color: '#10B981', marginTop: '6px', fontWeight: '500' }}>
+                Gain net après déduction du budget publicitaire : +{netProfit.toLocaleString('fr-FR')} MAD
               </div>
             </div>
 
@@ -154,33 +154,33 @@ export default function RoiCalculator() {
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '14px',
-                padding: '18px 0',
+                gap: '12px',
+                padding: '16px 0',
                 borderTop: '1px solid rgba(255, 255, 255, 0.08)',
                 borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-                marginBottom: '28px'
+                marginBottom: '24px'
               }}
             >
               <div>
-                <div style={{ fontSize: '0.78rem', color: '#707EAE', marginBottom: '4px' }}>Leads Générés</div>
-                <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#FFFFFF' }}>~{leadsGenerated}</div>
+                <div style={{ fontSize: '0.74rem', color: '#64748B', marginBottom: '2px' }}>Leads Générés</div>
+                <div style={{ fontSize: '1.35rem', fontWeight: '700', color: '#F8FAFC', fontFamily: 'monospace' }}>~{leadsGenerated}</div>
               </div>
               <div>
-                <div style={{ fontSize: '0.78rem', color: '#707EAE', marginBottom: '4px' }}>Nouveaux Clients</div>
-                <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#05CD99' }}>~{clientsAcquired}</div>
+                <div style={{ fontSize: '0.74rem', color: '#64748B', marginBottom: '2px' }}>Clients Signés</div>
+                <div style={{ fontSize: '1.35rem', fontWeight: '700', color: '#10B981', fontFamily: 'monospace' }}>~{clientsAcquired}</div>
               </div>
               <div>
-                <div style={{ fontSize: '0.78rem', color: '#707EAE', marginBottom: '4px' }}>Temps Économisé</div>
-                <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#FFB547' }}>{hoursSaved}h/sem</div>
+                <div style={{ fontSize: '0.74rem', color: '#64748B', marginBottom: '2px' }}>Temps Épargné</div>
+                <div style={{ fontSize: '1.35rem', fontWeight: '700', color: '#F59E0B', fontFamily: 'monospace' }}>{hoursSaved}h/sem</div>
               </div>
             </div>
 
             <Link
               href="/#contact"
               className="btn btn-primary"
-              style={{ width: '100%', padding: '16px', fontSize: '1rem', fontWeight: '700' }}
+              style={{ width: '100%', padding: '13px', fontSize: '0.94rem', fontWeight: '600' }}
             >
-              Activer Cette Stratégie Pour Mon Entreprise →
+              Déployer Cette Stratégie Pour Mon Entreprise →
             </Link>
           </div>
         </div>

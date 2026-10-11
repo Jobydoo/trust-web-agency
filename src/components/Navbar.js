@@ -24,90 +24,89 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 999,
-        transition: 'all 0.3s ease',
-        background: scrolled ? 'rgba(11, 15, 25, 0.88)' : 'transparent',
+        transition: 'all 0.25s ease',
+        background: scrolled ? 'rgba(8, 9, 12, 0.92)' : 'transparent',
         backdropFilter: scrolled ? 'blur(16px)' : 'none',
+        WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
         borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid transparent',
-        padding: scrolled ? '14px 0' : '22px 0'
+        padding: scrolled ? '14px 0' : '20px 0'
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Brand Logo */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
           <div
             style={{
-              width: '42px',
-              height: '42px',
-              borderRadius: '12px',
-              background: 'linear-gradient(135deg, #4318FF 0%, #00F2FE 100%)',
+              width: '36px',
+              height: '36px',
+              borderRadius: '8px',
+              background: '#2563EB',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: '#FFFFFF',
-              fontWeight: '900',
-              fontSize: '1.3rem',
-              boxShadow: '0 4px 15px rgba(67, 24, 255, 0.4)'
+              fontWeight: '800',
+              fontSize: '1.1rem',
+              boxShadow: '0 2px 8px rgba(37, 99, 235, 0.3)'
             }}
           >
             T
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '1.25rem', letterSpacing: '-0.02em', color: '#FFFFFF' }}>
-              Trust<span style={{ color: '#00F2FE' }}>Web</span>
-            </div>
-            <div style={{ fontSize: '0.68rem', color: '#A3AED0', textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: '700' }}>
-              Agency · Élite
+            <div style={{ fontWeight: '800', fontSize: '1.18rem', letterSpacing: '-0.02em', color: '#F8FAFC' }}>
+              Trust<span style={{ color: '#3B82F6' }}>Web</span> Agency
             </div>
           </div>
         </Link>
 
         {/* Desktop Nav Links */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '28px' }} className="desktop-nav">
-          <Link href="/#services" style={{ color: '#A3AED0', fontWeight: '500', fontSize: '0.92rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FFFFFF'} onMouseLeave={(e) => e.target.style.color = '#A3AED0'}>
-            Services
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '26px' }} className="desktop-nav">
+          <Link href="/#services" style={{ color: '#94A3B8', fontWeight: '500', fontSize: '0.9rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#F8FAFC'} onMouseLeave={(e) => e.target.style.color = '#94A3B8'}>
+            Expertises
           </Link>
-          <Link href="/#comparatif" style={{ color: '#A3AED0', fontWeight: '500', fontSize: '0.92rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FFFFFF'} onMouseLeave={(e) => e.target.style.color = '#A3AED0'}>
+          <Link href="/#comparatif" style={{ color: '#94A3B8', fontWeight: '500', fontSize: '0.9rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#F8FAFC'} onMouseLeave={(e) => e.target.style.color = '#94A3B8'}>
             Pourquoi Nous
           </Link>
-          <Link href="/#roi-calculator" style={{ color: '#A3AED0', fontWeight: '500', fontSize: '0.92rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FFFFFF'} onMouseLeave={(e) => e.target.style.color = '#A3AED0'}>
+          <Link href="/#roi-calculator" style={{ color: '#94A3B8', fontWeight: '500', fontSize: '0.9rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#F8FAFC'} onMouseLeave={(e) => e.target.style.color = '#94A3B8'}>
             Simulateur ROI
           </Link>
-          <Link href="/#portfolio" style={{ color: '#A3AED0', fontWeight: '500', fontSize: '0.92rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FFFFFF'} onMouseLeave={(e) => e.target.style.color = '#A3AED0'}>
-            Réalisations
+          <Link href="/#portfolio" style={{ color: '#94A3B8', fontWeight: '500', fontSize: '0.9rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#F8FAFC'} onMouseLeave={(e) => e.target.style.color = '#94A3B8'}>
+            Études de Cas
           </Link>
-          <Link href="/#villes" style={{ color: '#A3AED0', fontWeight: '500', fontSize: '0.92rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FFFFFF'} onMouseLeave={(e) => e.target.style.color = '#A3AED0'}>
-            Villes
+          <Link href="/blog" style={{ color: '#F8FAFC', fontWeight: '600', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span>Blog & Analyses</span>
+            <span style={{ background: 'rgba(37, 99, 235, 0.2)', color: '#60A5FA', border: '1px solid rgba(37, 99, 235, 0.4)', padding: '1px 6px', borderRadius: '4px', fontSize: '0.7rem' }}>20</span>
           </Link>
-          <Link href="/#faq" style={{ color: '#A3AED0', fontWeight: '500', fontSize: '0.92rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FFFFFF'} onMouseLeave={(e) => e.target.style.color = '#A3AED0'}>
+          <Link href="/#faq" style={{ color: '#94A3B8', fontWeight: '500', fontSize: '0.9rem', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#F8FAFC'} onMouseLeave={(e) => e.target.style.color = '#94A3B8'}>
             FAQ
           </Link>
         </nav>
 
         {/* CTA & Contact */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <a
             href={`tel:${agencyConfig.phoneRaw}`}
             className="phone-nav-btn"
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '8px',
-              fontSize: '0.88rem',
-              fontWeight: '600',
-              color: '#A3AED0',
+              gap: '6px',
+              fontSize: '0.85rem',
+              fontWeight: '500',
+              color: '#94A3B8',
               textDecoration: 'none',
-              padding: '8px 14px',
-              borderRadius: '999px',
+              padding: '7px 12px',
+              borderRadius: '6px',
               border: '1px solid rgba(255, 255, 255, 0.08)',
-              background: 'rgba(255, 255, 255, 0.03)'
+              background: 'rgba(255, 255, 255, 0.02)'
             }}
           >
-            <span>📞</span>
             <span>{agencyConfig.phone}</span>
           </a>
 
-          <Link href="/#contact" className="btn btn-primary" style={{ padding: '10px 22px', fontSize: '0.88rem' }}>
-            Devis Gratuit <span style={{ fontSize: '1rem' }}>→</span>
+          <Link href="/#contact" className="btn btn-primary" style={{ padding: '8px 18px', fontSize: '0.86rem' }}>
+            Devis Gratuit
           </Link>
 
           {/* Mobile Hamburger Toggle */}
@@ -117,9 +116,9 @@ export default function Navbar() {
             style={{
               display: 'none',
               background: 'transparent',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
-              borderRadius: '8px',
-              padding: '8px',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
+              borderRadius: '6px',
+              padding: '6px',
               color: '#FFFFFF',
               cursor: 'pointer'
             }}
@@ -140,34 +139,33 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div
           style={{
-            background: 'rgba(11, 15, 25, 0.98)',
-            backdropFilter: 'blur(20px)',
+            background: 'rgba(8, 9, 12, 0.98)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
             padding: '24px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '18px'
+            gap: '16px'
           }}
         >
-          <Link href="/#services" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: '600' }}>
-            Services
+          <Link href="/#services" onClick={() => setMobileMenuOpen(false)} style={{ color: '#F8FAFC', fontSize: '1rem', fontWeight: '500' }}>
+            Expertises
           </Link>
-          <Link href="/#comparatif" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: '600' }}>
+          <Link href="/#comparatif" onClick={() => setMobileMenuOpen(false)} style={{ color: '#F8FAFC', fontSize: '1rem', fontWeight: '500' }}>
             Pourquoi Nous
           </Link>
-          <Link href="/#roi-calculator" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: '600' }}>
+          <Link href="/#roi-calculator" onClick={() => setMobileMenuOpen(false)} style={{ color: '#F8FAFC', fontSize: '1rem', fontWeight: '500' }}>
             Simulateur ROI
           </Link>
-          <Link href="/#portfolio" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: '600' }}>
-            Réalisations
+          <Link href="/#portfolio" onClick={() => setMobileMenuOpen(false)} style={{ color: '#F8FAFC', fontSize: '1rem', fontWeight: '500' }}>
+            Études de Cas
           </Link>
-          <Link href="/#villes" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: '600' }}>
-            Villes Couvertes
+          <Link href="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: '#60A5FA', fontSize: '1rem', fontWeight: '600' }}>
+            Blog & Analyses (20 Articles)
           </Link>
-          <Link href="/#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: '600' }}>
+          <Link href="/#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: '#F8FAFC', fontSize: '1rem', fontWeight: '500' }}>
             FAQ
           </Link>
-          <div style={{ paddingTop: '12px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <div style={{ paddingTop: '12px', borderTop: '1px solid rgba(255, 255, 255, 0.08)', display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a href={agencyConfig.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ width: '100%' }}>
               Discuter sur WhatsApp
             </a>

@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main style={{ minHeight: '100vh', background: '#0B0F19', paddingTop: '100px' }}>
+    <main style={{ minHeight: '100vh', background: '#08090C', paddingTop: '100px' }}>
       <Navbar />
       <ContactSection />
       <FaqSection />

@@ -4,19 +4,19 @@ import { comparisonData } from '@/data/agencyData';
 
 export default function CompetitorComparison() {
   return (
-    <section id="comparatif" style={{ padding: '100px 0', background: 'rgba(15, 23, 42, 0.45)', position: 'relative' }}>
+    <section id="comparatif" style={{ padding: '100px 0', background: 'rgba(14, 16, 22, 0.6)', position: 'relative' }}>
       <div className="container">
         <div className="section-header">
-          <div className="badge badge-cyan section-eyebrow">
-            <span>⚔️</span> Pourquoi Trust Web Agency Surpasse la Concurrence
+          <div className="badge badge-primary section-eyebrow">
+            <span>BENCHMARK COMPARATIF</span>
           </div>
           <h2>
-            La différence entre un simple prestataire et votre{' '}
-            <span className="gradient-accent">partenaire de croissance</span>.
+            La différence entre un simple exécutant et votre{' '}
+            <span style={{ color: '#3B82F6' }}>partenaire de croissance</span>.
           </h2>
           <p>
-            Voyez concrètement pourquoi les entreprises exigeantes quittent les agences web traditionnelles
-            au profit de l'architecture Next.js et de l'écosystème Trust Web Agency.
+            Analyse comparative entre les méthodes des agences web traditionnelles
+            et l'architecture intégrée Next.js déployée par Trust Web Agency.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function CompetitorComparison() {
           style={{
             padding: '0',
             overflowX: 'auto',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            border: '1px solid rgba(255, 255, 255, 0.08)'
           }}
         >
           <table
@@ -38,19 +38,15 @@ export default function CompetitorComparison() {
             }}
           >
             <thead>
-              <tr style={{ background: 'rgba(67, 24, 255, 0.12)', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                <th style={{ padding: '22px 28px', color: '#FFFFFF', fontWeight: '700', fontSize: '1rem', width: '22%' }}>
+              <tr style={{ background: 'rgba(255, 255, 255, 0.02)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                <th style={{ padding: '20px 24px', color: '#94A3B8', fontWeight: '600', fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '0.05em', width: '22%' }}>
                   Critères Clés
                 </th>
-                <th style={{ padding: '22px 28px', color: '#FF5B5B', fontWeight: '700', fontSize: '1rem', width: '36%' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span>✕</span> Agences Web Traditionnelles (ex. WordPress / Elementor)
-                  </div>
+                <th style={{ padding: '20px 24px', color: '#94A3B8', fontWeight: '600', fontSize: '0.88rem', textTransform: 'uppercase', letterSpacing: '0.05em', width: '38%' }}>
+                  Agences Web Classiques (WordPress / NoCode)
                 </th>
-                <th style={{ padding: '22px 28px', color: '#00F2FE', fontWeight: '800', fontSize: '1.05rem', width: '42%', background: 'rgba(0, 242, 254, 0.08)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span>★</span> Trust Web Agency (Architecture Élite Next.js)
-                  </div>
+                <th style={{ padding: '20px 24px', color: '#F8FAFC', fontWeight: '700', fontSize: '0.92rem', width: '40%', background: 'rgba(37, 99, 235, 0.08)', borderLeft: '1px solid rgba(37, 99, 235, 0.2)' }}>
+                  Trust Web Agency (Next.js 14 & Edge)
                 </th>
               </tr>
             </thead>
@@ -60,24 +56,24 @@ export default function CompetitorComparison() {
                   key={idx}
                   style={{
                     borderBottom: idx === comparisonData.length - 1 ? 'none' : '1px solid rgba(255, 255, 255, 0.06)',
-                    background: idx % 2 === 0 ? 'transparent' : 'rgba(255, 255, 255, 0.015)'
+                    background: idx % 2 === 0 ? 'transparent' : 'rgba(255, 255, 255, 0.01)'
                   }}
                 >
-                  <td style={{ padding: '20px 28px', fontWeight: '700', color: '#FFFFFF', fontSize: '0.95rem' }}>
+                  <td style={{ padding: '20px 24px', fontWeight: '600', color: '#F8FAFC', fontSize: '0.92rem' }}>
                     {item.feature}
                   </td>
-                  <td style={{ padding: '20px 28px', color: '#A3AED0', fontSize: '0.92rem' }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <span style={{ color: '#FF5B5B', fontWeight: 'bold' }}>✕</span>
+                  <td style={{ padding: '20px 24px', color: '#94A3B8', fontSize: '0.9rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                      <span style={{ color: '#EF4444', fontWeight: 'bold' }}>—</span>
                       <span>{item.traditional}</span>
                     </div>
                   </td>
-                  <td style={{ padding: '20px 28px', color: '#FFFFFF', fontSize: '0.92rem', background: 'rgba(0, 242, 254, 0.04)' }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '6px' }}>
-                      <span style={{ color: '#05CD99', fontWeight: 'bold' }}>✓</span>
+                  <td style={{ padding: '20px 24px', color: '#F8FAFC', fontSize: '0.9rem', background: 'rgba(37, 99, 235, 0.03)', borderLeft: '1px solid rgba(37, 99, 235, 0.15)' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '6px' }}>
+                      <span style={{ color: '#10B981', fontWeight: 'bold' }}>✓</span>
                       <strong style={{ color: '#FFFFFF' }}>{item.trustAgency}</strong>
                     </div>
-                    <div style={{ fontSize: '0.82rem', color: '#00F2FE', paddingLeft: '22px' }}>
+                    <div style={{ fontSize: '0.8rem', color: '#60A5FA', paddingLeft: '18px' }}>
                       ↳ {item.advantage}
                     </div>
                   </td>
